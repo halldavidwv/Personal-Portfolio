@@ -1,42 +1,68 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    color: white;
     background-color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    text-shadow: 2px 2px 5px black;
+    color: white;
 }
 
 .header {
+    background-color: #212529;
+    height: 100vh;
+    width: 100%;
     font-size: 1.75em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    line-height: 1px;
-    gap: 4px;
 }
 
-.h1-fade {
-    animation: fadeInOut 2s ease-in-out forwards;
+.header h1 {
+    opacity: 1;
 }
 
-.h1-hidden {
-    opacity: 0;
+.h1-child {
+    position: absolute;
+    top: 165px;
 }
 
-@keyframes fadeInOut {
-    0% {
-      opacity: 1;
+.h1-parent {
+    position: relative;
+}
+
+.fade-in {
+    animation: fade-in 5s ease-in-out infinite alternate;
+}
+
+.fade-out {
+    animation: fade-out 5s ease-in-out forwards infinite alternate;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
     }
-    50% {
-      opacity: 0; /* Fade out the old h1 */
+
+    to {
+        opacity: 1;
     }
-    100% {
-      opacity: 1; /* Fade in the new h1 */
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
     }
-  }
+
+    to {
+        opacity: 0;
+    }
+}
 
 .tagline {
+    background-color: #343a40;
+    height: 50vh;
+    padding: 100px;
     display: flex;
     flex-direction: row;
-    margin: 100px;
 }
 
 .tagline-text {
@@ -55,15 +81,27 @@ body {
 
 .tagline img {
     flex: 0 0 auto;
+    height: max-content;
     width: 250px;
 }
 
 .skills {
+    background-color: #212529;
+    height: 65vh;
     font-size: 1.5em;
-    margin: 100px;
+    padding: 100px;
 }
 
 .contact {
+    background-color: #343a40;
+    height: 40vh;
     font-size: 1.5em;
-    margin: 100px;
+    padding: 100px;
+}
+
+.contact img {
+    width: 100px;
+    height: max-content;
+    filter: brightness(100);
+    padding-left: 25px;
 }
