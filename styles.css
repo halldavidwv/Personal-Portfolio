@@ -1,0 +1,69 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: black;
+}
+
+.header {
+    font-size: 1.75em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1px;
+    gap: 4px;
+}
+
+.h1-fade {
+    animation: fadeInOut 2s ease-in-out forwards;
+}
+
+.h1-hidden {
+    opacity: 0;
+}
+
+@keyframes fadeInOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0; /* Fade out the old h1 */
+    }
+    100% {
+      opacity: 1; /* Fade in the new h1 */
+    }
+  }
+
+.tagline {
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+}
+
+.tagline-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1px;
+}
+
+.tagline h3,
+.tagline p {
+    font-size: 1.5em;
+    flex: 0;
+    margin-right: 50px;
+}
+
+.tagline img {
+    flex: 0 0 auto;
+    width: 250px;
+}
+
+.skills {
+    font-size: 1.5em;
+    margin: 100px;
+}
+
+.contact {
+    font-size: 1.5em;
+    margin: 100px;
+}
